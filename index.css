@@ -1,0 +1,27 @@
+#jumboImg {
+	z-index: -1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background: url('pexels-photo.jpg') no-repeat center center;
+	width: 100%;
+	height: 35%;
+}
+
+#jumboTransparent {
+	background-color: transparent;
+}
+
+.jumboText {
+	color: white;
+	text-align: center;
+}
+
+.footerText {
+	font-size: .75em;
+	text-align: center;
+}
+
+.textPadding {
+	padding: 30px;
+}
