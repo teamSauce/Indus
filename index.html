@@ -13,6 +13,8 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+<link rel="stylesheet" href="index.css">
+
 
   <title>Indus</title>
   
@@ -55,14 +57,16 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<div class="jumbotron">
-  <h1>Indus Books and Music</h1>
-  <p>...</p>
+<div class="jumbotron" style="background-color: transparent;">
+  <div id="jumboTransparent">
+    <h1 style="color: white; text-align: center;">Indus Books and Music</h1>
+    <p class="jumboText">Premier Marketplace for local and independent authors and musicians</p>
+  </div>
+  <div id="jumboImg"></div>
 </div>
 
-<div class="container"> 
-  <h1>Stuff</h1>
-  <div id="book1">
+<div class="container">
+  <div id="book1" class="col-md-6">
     <div class="name"></div>
     <div class="category"></div>
     <div class="author"></div>
@@ -72,7 +76,7 @@
 
   </div>
 
-  <div id="book2">
+  <div id="book2" class="col-md-6">
     <div class="name"></div>
     <div class="category"></div>
     <div class="author"></div>
@@ -82,7 +86,7 @@
 
   </div>
 
- <div id="album1">
+ <div id="album1" class="col-md-6">
     <div class="artist"></div>
     <div class="name"></div>
     <div class="category"></div>
@@ -92,9 +96,9 @@
 
   </div>
 
-  <div id="album2">
+  <div id="album2" class="col-md-6">
     <div class="artist"></div>
-    <div class="name "></div>
+    <div class="name"></div>
     <div class="category"></div>
     <div class="price"></div>
     <div class="picture"></div>
@@ -107,13 +111,16 @@
 </div>
 
 <div class="panel panel-default">
-  <div class="panel-footer">Panel footer</div>
+  <div class="panel-footer">
+  <p class="footerText"><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> 2016</p>
+  <p class="footerText">Team Sauce</p>
+  </div>
 </div>
   
   <script>
       var books = [
 
-        {name: "7 Ladies and 6 Man Dwarves", 
+        book1 = {name: "7 Ladies and 6 Man Dwarves", 
         category: "Horror",
         author: "Paula Price",
         price: 10,
@@ -121,7 +128,7 @@
         sellingPoints: ["Times best horror novel", "rated #1 by Glamour", "Indus readers favorite novel"]
         },
 
-        {name: "Treasure Trolls and their Wives", 
+        book2 = {name: "Treasure Trolls and their Wives", 
         category: ["Non-fiction", "Educational"],
         author: "Montel Williams",
         price: 10,
@@ -134,7 +141,7 @@
 
       var albums = [
 
-        {artist: "Adeline",
+        album1 = {artist: "Adeline",
         name: "55 and Counting", 
         category: "Pop",
         price: 10,
@@ -142,7 +149,7 @@
         sellingPoints: ["Album of the year", "rated #1 by MusicMag", "Billboard Top Pick"]
         },
 
-        {artist: "Little Potbelly Piggy",
+        album2 = {artist: "Little Potbelly Piggy",
         name: "Werk, Werk, Werk", 
         category: "Reggae",
         price: 10,
@@ -151,8 +158,38 @@
 
         }
       ]
-      
-      $('.container').css("background-color", "red");
+
+      // Book 1
+      $('#book1 .name').text(book1.name);
+      $('#book1 .category').text(book1.category);
+      $('#book1 .author').text(book1.author);
+      $('#book1 .price').text(book1.price);
+      $('#book1 .sellingPoints').text(book1.sellingPoints);
+      $('#book1 .picture').text(book1.picture)
+
+      // Book 2
+      $('#book2 .name').text(book2.name);
+      $('#book2 .category').text(book2.category);
+      $('#book2 .author').text(book2.author);
+      $('#book2 .price').text(book2.price);
+      $('#book2 .sellingPoints').text(book2.sellingPoints);
+      $('#book2 .picture').text(book2.picture);
+
+      // Album 1
+      $('#album1 .artist').text(album1.artist);
+      $('#album1 .name').text(album1.name);
+      $('#album1 .category').text(album1.category);
+      $('#album1 .price').text(album1.price);
+      $('#album1 .sellingPoints').text(album1.sellingPoints);
+      $('#album1 .picture').text(album1.picture);
+
+      // Album2
+      $('#album2 .artist').text(album2.artist);
+      $('#album2 .name').text(album2.name);
+      $('#album2 .category').text(album2.category);
+      $('#album2 .price').text(album2.price);
+      $('#album2 .sellingPoints').text(album2.sellingPoints);
+      $('#album2 .picture').text(album2.picture);
 
   </script>
 
