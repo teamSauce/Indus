@@ -3,199 +3,160 @@
 <head>
   <meta charset="UTF-8">
  
- <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.js"></script>
   <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
-<link rel="stylesheet" href="index.css">
-
+  <link rel="stylesheet" href="index.css">
 
   <title>Indus</title>
   
 </head>
 <body>
+  <!-- Nav Bar begins -->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Indus</a>
+      </div>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">Indus</a>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li id="showAll" class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
+          <li id="books"><a href="#">Books</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li id="albums"><a href="#">Albums</a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Action</a></li>
+              <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li>
+              <li role="separator" class="divider"></li>
+              <li><a href="#">Separated link</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
     </div>
+    <!-- /.container-fluid -->
+  </nav>
+  <!-- Nav Bar ends -->
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home<span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Books</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Albums</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#">Action</a></li>
-            <li><a href="#">Another action</a></li>
-            <li><a href="#">Something else here</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-
-<div class="jumbotron" style="background-color: transparent;">
-  <div id="jumboTransparent">
-    <h1 style="color: white; text-align: center;">Indus Books and Music</h1>
-    <p class="jumboText">Premier Marketplace for local and independent authors and musicians</p>
+  <!-- jumbotron begins -->
+  <div class="jumbotron" style="background-color: transparent;">
+    <div id="jumboTransparent">
+      <h1 style="color: white; text-align: center;">Indus Books and Music</h1>
+      <p class="jumboText">Premier Marketplace for local and independent authors and musicians</p>
+    </div>
+    <div id="jumboImg"></div>
   </div>
-  <div id="jumboImg"></div>
-</div>
+  <!-- jumbotron ends -->
 
-<div class="container">
-  <div id="book1" class="col-md-6 textPadding">
-    <div class="name"></div>
-    <div class="category"></div>
-    <div class="author"></div>
-    <div class="price"></div>
-    <div class="picture"></div>
-    <div class="sellingPoints"></div>
-
+  <div class="container">
+    <div id="content"></div>
   </div>
-
-  <div id="book2" class="col-md-6 textPadding">
-    <div class="name"></div>
-    <div class="category"></div>
-    <div class="author"></div>
-    <div class="price"></div>
-    <div class="picture"></div>
-    <div class="sellingPoints"></div>
-
+  <!-- footer begins -->
+  <div class="panel panel-default">
+    <div class="panel-footer">
+    <p class="footerText"><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> 2016</p>
+    <p class="footerText">Team Sauce</p>
+    </div>
   </div>
+  <!-- footer ends -->
 
- <div id="album1" class="col-md-6 textPadding">
-    <div class="artist"></div>
-    <div class="name"></div>
-    <div class="category"></div>
-    <div class="price"></div>
-    <div class="picture"></div>
-    <div class="sellingPoints"></div>
-
-  </div>
-
-  <div id="album2" class="col-md-6 textPadding">
-    <div class="artist"></div>
-    <div class="name"></div>
-    <div class="category"></div>
-    <div class="price"></div>
-    <div class="picture"></div>
-    <div class="sellingPoints"></div>
-
-  </div>
-
-
-
-</div>
-
-<div class="panel panel-default">
-  <div class="panel-footer">
-  <p class="footerText"><span class="glyphicon glyphicon-copyright-mark" aria-hidden="true"></span> 2016</p>
-  <p class="footerText">Team Sauce</p>
-  </div>
-</div>
-  
   <script>
-      var books = [
+    var books = [
+      book1 = {name: "7 Ladies and 6 Man Dwarves", 
+      category: "Horror",
+      author: "Paula Price",
+      price: 10,
+      picture: "www.7ladiesthehorror.com",
+      sellingPoints: ["Times best horror novel", "rated #1 by Glamour", "Indus readers favorite novel"],
+      id: 001
+      },
 
-        book1 = {name: "7 Ladies and 6 Man Dwarves", 
-        category: "Horror",
-        author: "Paula Price",
-        price: 10,
-        picture: "www.7ladiesthehorror.com",
-        sellingPoints: ["Times best horror novel", "rated #1 by Glamour", "Indus readers favorite novel"]
-        },
+      book2 = {name: "Treasure Trolls and their Wives", 
+      category: ["Non-fiction", "Educational"],
+      author: "Montel Williams",
+      price: 10,
+      picture: "hey hey hey",
+      sellingPoints: ["Times best non-fiction novel", + " " + "rated #1 by Cosmo", + " " + "Indus readers favorite non-fiction novel"],
+      id: 001
+      }
+    ]
 
-        book2 = {name: "Treasure Trolls and their Wives", 
-        category: ["Non-fiction", "Educational"],
-        author: "Montel Williams",
-        price: 10,
-        picture: "www.thetruthabouttrollwives.com",
-        sellingPoints: ["Times best non-fiction novel", "rated #1 by Cosmo", "Indus readers favorite non-fiction novel"]
+    var albums = [
+      album1 = {artist: "Adeline",
+      name: "55 and Counting", 
+      category: "Pop",
+      price: 10,
+      picture: "www.adelinecancount.com",
+      sellingPoints: ["Album of the year", + " " + "rated #1 by MusicMag", "Billboard Top Pick"],
+      id: 003
+      },
 
+      album2 = {artist: "Little Potbelly Piggy",
+      name: "Werk, Werk, Werk", 
+      category: "Reggae",
+      price: 10,
+      picture: "www.werkpiggywerk.com",
+      sellingPoints: ["AMA nominated", + " " + "rated #1 by Cosmo",+ " " + "Indus favorite"],
+      id: 003
+      }
+    ]
+
+    var add_to_page = function(arr) {
+      // Iterate through an array
+      for (var i = 0; i < arr.length; i++) {
+         arr[i];
+        var $div = $("<div class=\"col-md-6 textPadding" + ' ' + arr[i].id + "\"></div>")
+        // Iterate through that arrays object
+        for (var key in arr[i]) {
+          // Append that content into the html
+          var $p = $("<p></p>");
+          // console.log($p);
+          $p.text = arr[i][key];
+          $div.append($p.text + "<br>");
         }
+        $('#content').append($div);      
+      }
+    };
 
-      ]
+    add_to_page(books);
+    add_to_page(albums);
 
-      var albums = [
+    $('#books').click(function(){
+      $('.3').hide();
+      $('.1').show();
+    });
 
-        album1 = {artist: "Adeline",
-        name: "55 and Counting", 
-        category: "Pop",
-        price: 10,
-        picture: "www.adelinecancount.com",
-        sellingPoints: ["Album of the year", "rated #1 by MusicMag", "Billboard Top Pick"]
-        },
+    $('#albums').click(function(){
+      $('.1').hide();
+      $('.3').show();
+    });
 
-        album2 = {artist: "Little Potbelly Piggy",
-        name: "Werk, Werk, Werk", 
-        category: "Reggae",
-        price: 10,
-        picture: "www.werkpiggywerk.com",
-        sellingPoints: ["AMA nominated", "rated #1 by Cosmo", "Indus favorite"]
-
-        }
-      ]
-
-      // Book 1
-      $('#book1 .name').text(book1.name);
-      $('#book1 .category').text(book1.category);
-      $('#book1 .author').text(book1.author);
-      $('#book1 .price').text(book1.price);
-      $('#book1 .sellingPoints').text(book1.sellingPoints);
-      $('#book1 .picture').text(book1.picture)
-
-      // Book 2
-      $('#book2 .name').text(book2.name);
-      $('#book2 .category').text(book2.category);
-      $('#book2 .author').text(book2.author);
-      $('#book2 .price').text(book2.price);
-      $('#book2 .sellingPoints').text(book2.sellingPoints);
-      $('#book2 .picture').text(book2.picture);
-
-      // Album 1
-      $('#album1 .artist').text(album1.artist);
-      $('#album1 .name').text(album1.name);
-      $('#album1 .category').text(album1.category);
-      $('#album1 .price').text(album1.price);
-      $('#album1 .sellingPoints').text(album1.sellingPoints);
-      $('#album1 .picture').text(album1.picture);
-
-      // Album2
-      $('#album2 .artist').text(album2.artist);
-      $('#album2 .name').text(album2.name);
-      $('#album2 .category').text(album2.category);
-      $('#album2 .price').text(album2.price);
-      $('#album2 .sellingPoints').text(album2.sellingPoints);
-      $('#album2 .picture').text(album2.picture);
+    $('#showAll').click(function(){
+      $('.1').show();
+      $('.3').show();
+    })
 
   </script>
-
 </body>
-
-   
-
-
 </html>
