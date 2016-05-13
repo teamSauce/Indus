@@ -87,7 +87,7 @@
   <!-- footer ends -->
 
   <script>
-    var books = [
+    var products = [
       {picture: "<img class=\"img-responsive smallImg img-thumbnail\", src=Images/ladies-and-dwarves.jpg />",
       name: "7 Ladies and 6 Man Dwarves", 
       category: "Horror",
@@ -106,10 +106,8 @@
       sellingPoints: ["Times best non-fiction novel", " rated #1 by Cosmo", " Indus readers favorite non-fiction novel"],
       productType: 001,
       id: 1002
-      }
-    ]
+      },
 
-    var albums = [
       {picture: "<img class=\"img-responsive smallImg img-thumbnail2\" src=Images/adeline.jpg />",
       artist: "Adeline",
       name: "74 and Counting", 
@@ -138,17 +136,20 @@
         var $div = $("<div class=\"col-md-6 textPadding" + ' ' + arr[i].productType + ' ' + arr[i].id + "\"></div>")
         // Iterate through that arrays object
         for (var key in arr[i]) {
-          // Append that content into the html
-          var $p = $("<p></p>");
-          $p.text = arr[i][key];
-          $div.append($p.text + "<br>");
+          if (key === "productType" || key === "id") {
+            continue;
+          } else {
+            // Append that content into the html
+            var $p = $("<p></p>");
+            $p.text = arr[i][key];
+            $div.append($p.text + "<br>");
+          }
         }
-        $('#content').append($div);      
+        $('#content').append($div);
       }
     };
 
-    add_to_page(books);
-    add_to_page(albums);
+    add_to_page(products);
 
     $('#books').click(function(){
       $('.3').hide();
