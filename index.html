@@ -44,11 +44,10 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li role="separator" class="divider"></li>
-              <li><a href="#">Separated link</a></li>
+              <li id="ladies"><a href="#">7 Ladies and 6 Man Dwarves</a></li>
+              <li id="trolls"><a href="#">Treasure Trolls and their Wives</a></li>
+              <li id="adeline"><a href="#">Adeline</a></li>
+              <li id="piggy"><a href="#">Little Potbelly Piggy</a></li>
             </ul>
           </li>
         </ul>
@@ -88,43 +87,45 @@
   <!-- footer ends -->
 
   <script>
-    var books = [
-      book1 = {name: "7 Ladies and 6 Man Dwarves", 
+    var products = [
+      {picture: "<img class=\"img-responsive smallImg img-thumbnail\", src=Images/ladies-and-dwarves.jpg />",
+      name: "7 Ladies and 6 Man Dwarves", 
       category: "Horror",
       author: "Paula Price",
-      price: 10,
-      picture: "www.7ladiesthehorror.com",
-      sellingPoints: ["Times best horror novel", "rated #1 by Glamour", "Indus readers favorite novel"],
-      id: 001
+      price: ["$ " + 9.99],
+      sellingPoints: ["Times best horror novel", " rated #1 by Glamour", " Indus readers favorite novel"],
+      productType: 001,
+      id: 1001
       },
 
-      book2 = {name: "Treasure Trolls and their Wives", 
-      category: ["Non-fiction", "Educational"],
+      {picture: "<img class=\"img-responsive smallImg img-thumbnail\", src=Images/trolls-wives.jpg />",
+      name: "Treasure Trolls and their Wives", 
+      category: ["Non-fiction", " Educational"],
       author: "Montel Williams",
-      price: 10,
-      picture: "hey hey hey",
-      sellingPoints: ["Times best non-fiction novel", + " " + "rated #1 by Cosmo", + " " + "Indus readers favorite non-fiction novel"],
-      id: 001
-      }
-    ]
-
-    var albums = [
-      album1 = {artist: "Adeline",
-      name: "55 and Counting", 
-      category: "Pop",
-      price: 10,
-      picture: "www.adelinecancount.com",
-      sellingPoints: ["Album of the year", + " " + "rated #1 by MusicMag", "Billboard Top Pick"],
-      id: 003
+      price: ["$ " + 29.15],
+      sellingPoints: ["Times best non-fiction novel", " rated #1 by Cosmo", " Indus readers favorite non-fiction novel"],
+      productType: 001,
+      id: 1002
       },
 
-      album2 = {artist: "Little Potbelly Piggy",
-      name: "Werk, Werk, Werk", 
+      {picture: "<img class=\"img-responsive smallImg img-thumbnail2\" src=Images/adeline.jpg />",
+      artist: "Adeline",
+      name: "74 and Counting", 
+      category: "Pop",
+      price: ["$" + 10.99],
+      sellingPoints: ["Album of the year", " rated #1 by MusicMag", " Billboard Top Pick"],
+      productType: 003,
+      id: 2001
+      },
+
+      {picture: "<img class=\"img-responsive smallImg img-thumbnail\" src=Images/werk.jpg />",
+      artist: "Little Potbelly Piggy",
+      name: "Werk, Werk, Werk: Live at the Velvet Margarita", 
       category: "Reggae",
-      price: 10,
-      picture: "www.werkpiggywerk.com",
-      sellingPoints: ["AMA nominated", + " " + "rated #1 by Cosmo",+ " " + "Indus favorite"],
-      id: 003
+      price: ["$" + 15.51],
+      sellingPoints: ["AMA nominated", " rated #1 by Cosmo", " Indus favorite"],
+      productType: 003,
+      id: 2002
       }
     ]
 
@@ -132,21 +133,23 @@
       // Iterate through an array
       for (var i = 0; i < arr.length; i++) {
          arr[i];
-        var $div = $("<div class=\"col-md-6 textPadding" + ' ' + arr[i].id + "\"></div>")
+        var $div = $("<div class=\"col-md-6 textPadding" + ' ' + arr[i].productType + ' ' + arr[i].id + "\"></div>")
         // Iterate through that arrays object
         for (var key in arr[i]) {
-          // Append that content into the html
-          var $p = $("<p></p>");
-          // console.log($p);
-          $p.text = arr[i][key];
-          $div.append($p.text + "<br>");
+          if (key === "productType" || key === "id") {
+            continue;
+          } else {
+            // Append that content into the html
+            var $p = $("<p></p>");
+            $p.text = arr[i][key];
+            $div.append($p.text + "<br>");
+          }
         }
-        $('#content').append($div);      
+        $('#content').append($div);
       }
     };
 
-    add_to_page(books);
-    add_to_page(albums);
+    add_to_page(products);
 
     $('#books').click(function(){
       $('.3').hide();
@@ -161,6 +164,30 @@
     $('#showAll').click(function(){
       $('.1').show();
       $('.3').show();
+    })
+
+    $('#ladies').click(function(){
+      $('.3').hide();
+      $('.1002').hide();
+      $('.1001').show();
+    })
+
+    $('#trolls').click(function(){
+      $('.3').hide();
+      $('.1001').hide();
+      $('.1002').show();
+    })
+
+    $('#adeline').click(function(){
+      $('.1').hide();
+      $('.2002').hide();
+      $('.2001').show();
+    })
+
+    $('#piggy').click(function(){
+      $('.1').hide();
+      $('.2001').hide();
+      $('.2002').show();
     })
 
   </script>
